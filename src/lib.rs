@@ -16,7 +16,7 @@ pub fn shortened_path(path: &Utf8Path, home: &Utf8Path) -> Result<String> {
     };
     let path = path.strip_prefix(base)?;
 
-    let mut parts = path
+    let mut parts: Vec<String> = path
         .components()
         .rev()
         .enumerate()
@@ -33,7 +33,7 @@ pub fn shortened_path(path: &Utf8Path, home: &Utf8Path) -> Result<String> {
                 }
             }
         })
-        .collect::<Vec<String>>();
+        .collect();
 
     parts.reverse();
 
