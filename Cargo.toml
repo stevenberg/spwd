@@ -1,0 +1,15 @@
+[package]
+name = "spwd"
+version = "1.0.0"
+authors = ["Steven Berg <steven@stevenberg.net>"]
+edition = "2021"
+description = """
+Print the current directory, with directories before the last shortened to
+one character.
+"""
+license = "MIT"
+
+[dependencies]
+anyhow = "1.0.58"
+camino = "1.0.9"
+directories = "4.0.1"
